@@ -23,7 +23,6 @@ function App(props) {
                 </a>
               </header>
               <Dashboard/>
-              <Add/>
             </div>
       </body>
     </div>

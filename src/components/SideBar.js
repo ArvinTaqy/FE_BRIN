@@ -9,7 +9,7 @@ function SideBar() {
                     <div className="d-flex justify-content-between">
                         <div className="logo">
                                 <img 
-                                src="/images/logo/athus.png" alt="Logo"
+                                src="/images/logo/Alt_Logo_BRIN.png" alt="Logo"
                                 />
                         </div>
                         <div className="toggler">

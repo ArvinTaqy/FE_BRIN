@@ -1,0 +1,19 @@
+Home page
+	> Login
+	> Menu 
+		> Data pengukuran (publik) *jadi submenu
+		- diberi halaman intro (konten belakangan)
+			> Udara
+				Tabel data
+			> Ews
+				> Lokasi
+				Tabel data
+			> Banjir
+				> Lokasi
+				Tabel data
+			> Curah Hujan
+				> Lokasi
+				Tabel data
+				> Input Data (khusu login)
+		> Tanmbahkan perangkat (khusus login)
+			> Form tambah perangakat
