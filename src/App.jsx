@@ -1,17 +1,32 @@
 import React from 'react';
+import RootLayout from './layouts/RootLayout';
+import { useRoutes, Route, Routes } from "react-router-dom";
+// import { RootLayout as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import Dashboard from './pages/Dashboard';
 import Add from './pages/Add';
 import { useState } from "react";
 import SideBar from './components/SideBar';
 import { Children } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
 //import SideBar from './components/SideBar'
 //import { useState, useEffect } from 'react'
 //import axios from 'axios';
 
+const App = () => {
+  return (
+    <RootLayout>
+      <Routes>
+        <Route path ="/Dashborad" element={<Dashboard />}/>
+        <Route path ="/Add" element={<Add />}/>
+      </Routes>
+    </RootLayout>
+  );
+};
 
-function App(props) {
+export default App;
+
+/**
+ function App(props) {
   return(
     <div className='App'>
       <SideBar/>
@@ -28,8 +43,7 @@ function App(props) {
     </div>
   )
 }
-
-export default App;
+ */
 /**
   const { title } = props;
   return (

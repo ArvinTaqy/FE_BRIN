@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './SideBar.css'
 
+  
 function SideBar() {
     return (
         <div id="sidebar" className="active">
@@ -23,7 +24,7 @@ function SideBar() {
                         <li className={`sidebar-item ${"title" === "Databases" ? "active" : ""}`}>
                             <a href='Dashboard' className='sidebar-link'>
                                 <i className="bi-speedometer2"></i>
-                                <span>Data Pengukuran</span>
+                                <span>Perangkat</span>
                             </a>
                         </li>
                         <li className={`sidebar-item ${"title" === "Databases" ? "active" : ""}`}>
