@@ -16,7 +16,7 @@ const App = () => {
   return (
     <RootLayout>
       <Routes>
-        <Route path ="/Dashborad" element={<Dashboard />}/>
+        <Route path ="/Dashboard" element={<Dashboard />}/>
         <Route path ="/Add" element={<Add />}/>
       </Routes>
     </RootLayout>
@@ -25,6 +25,7 @@ const App = () => {
 
 export default App;
 
+// https://www.youtube.com/watch?v=YELPZw5ieHQ
 /**
  function App(props) {
   return(
