@@ -1,9 +1,9 @@
 //import "../App.css";
 
-function Dashboard() {
+function PerangkatA() {
     return (
     <><h1>
-        Perangkat ATHUS
+        Perangkat A
     </h1>
     <p>Perangkat yang terdaftar</p><div class="section mt-2">
             <form action="" method="POST">
@@ -42,4 +42,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard;
+export default PerangkatA;

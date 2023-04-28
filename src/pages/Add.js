@@ -1,3 +1,5 @@
+//Admin Only
+
 function Add() {
     return (
         <><h1>
