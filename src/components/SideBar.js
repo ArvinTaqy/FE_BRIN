@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import React, { useState } from "react";
 
   
-function SideBar() {
+const SideBar = ({SideBar}) => {
     return (
-        <div id="sidebar" className="active">
+        <div className={SideBar?"SideBar sidebar--open":"SideBar"}>
             <div className="sidebar-wrapper active">
                 <div className="sidebar-header">
                     <div className="d-flex justify-content-between">
@@ -12,9 +12,6 @@ function SideBar() {
                                 <img 
                                 src="/images/logo/Alt_Logo_BRIN.png" alt="Logo"
                                 />
-                        </div>
-                        <div className="toggler">
-                            <a href="javascript:;" className="sidebar-hide d-xl-none d-block"><i className="bi bi-x bi-middle pd-3"></i></a>
                         </div>
                     </div>
                 </div>
@@ -29,13 +26,13 @@ function SideBar() {
                         </li>
                         <li className={`sidebar-item ${"title" === "Perangkat A" ? "active" : ""}`}>
                             <a href='PerangkatA' className='sidebar-link'>
-                                <i className="bi-whatsapp"></i>
+                                <i className="bi bi-droplet-half"></i>
                                 <span>Perangkat A</span>
                             </a>
                         </li>
                         <li className={`sidebar-item ${"title" === "Perangkat B" ? "active" : ""}`}>
                             <a href='PerangkatB' className='sidebar-link'>
-                                <i className="bi-linkedin"></i>
+                                <i className="bi bi-facebook"></i>
                                 <span>Perangkat B</span>
                             </a>
                         </li>
@@ -53,7 +50,7 @@ function SideBar() {
                         </li>
                         <li className={`sidebar-item ${"title" === "Databases" ? "active" : ""}`}>
                             <a href='Add' className='sidebar-link'>
-                                <i className="bi-table"></i>
+                                <i className="bi-tablet"></i>
                                 <span>Tambahkan Perangkat</span>
                             </a>
                         </li>

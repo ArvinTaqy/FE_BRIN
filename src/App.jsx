@@ -8,6 +8,7 @@ import PerangkatB from './pages/PerangkatB';
 import PerangkatC from './pages/PerangkatC';
 import PerangkatD from './pages/PerangkatD';
 import Add from './pages/Add';
+import Login from './pages/Login';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path ="/PerangkatC" element={<PerangkatC />}/>
         <Route path ="/PerangkatD" element={<PerangkatD />}/>
         <Route path ="/Add" element={<Add />}/>
+        <Route path ="/Login" element={<Login />}/>
       </Routes>
     </RootLayout>
   );
