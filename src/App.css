@@ -1,3 +1,10 @@
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f6f9ff;
+  color: #444444;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -20,8 +27,9 @@
   font-size: 26px;
   font-weight: 700;
   color: #012970;
-  font-family: "Nunito", sans-serif;
-  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 .header {
@@ -111,6 +119,95 @@
 # End Header
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Page Title
+--------------------------------------------------------------*/
+.pagetitle {
+  margin-bottom: 10px;
+}
+
+.pagetitle h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #012970;
+}
+/*--------------------------------------------------------------
+# End Page Title
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 10px;
+  padding: 10px 10px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  color: #899bbd;
+  font-weight: 600;
+}
+
+.breadcrumb a {
+  color: #899bbd;
+  transition: 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #51678f;
+}
+
+.breadcrumb .breadcrumb-item::before {
+  color: #899bbd;
+}
+
+.breadcrumb .active {
+  color: #51678f;
+  font-weight: 600;
+}
+/* Card */
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-body {
+  padding: 0 10px 10px 20px;
+}
+.card img{
+  height: 240px;
+  width: 280px;
+}
+
+/*--------------------------------------------------------------
+# End Main
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar {
@@ -118,7 +215,7 @@
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 280px;
   z-index: 996;
   transition: all 0.3s;
   padding: 20px;

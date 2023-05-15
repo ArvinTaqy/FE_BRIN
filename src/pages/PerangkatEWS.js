@@ -1,6 +1,8 @@
 import React from "react";
+import TesChart from "../components/TesChart";
+import ToolBar from "../components/ToolBar";
 
-const ToolBar = ({}) => {
+const PerangkatEWS = ({}) => {
     const select = (el, all = false) => {
         el = el.trim()
         if (all) {
@@ -32,11 +34,12 @@ const ToolBar = ({}) => {
         <div>
         <header className="header">
         <div className="header fixed-top d-flex align-items-center">
+
             <div className="d-flex align-items-center justify-content-between">
                 <a href="ToolBar" className="logo d-flex align-items-center">
-                    <img src="/images/logo/BRIN.png" alt=""></img>
-                        <span className="d-none d-lg-block">TIM DIKE</span>
-                    </a>    
+                    <img src="/images/logo/BRIN.png" alt=""/>
+                    <span className="d-none d-lg-block">TIM DIKE</span>
+                </a>    
                 <i className="bi bi-list toggle-sidebar-btn"></i>
             </div>
 
@@ -107,14 +110,14 @@ const ToolBar = ({}) => {
             <ul className="sidebar-nav" id="sidebar-nav">
 
                 <li className="nav-item">
-                    <a className="nav-link " href='ToolBar'>
+                    <a className="nav-link collapsed " href='ToolBar'>
                     <i className="bi bi-ui-radios-grid"></i>
                     <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/PerangkatEWS">
+                    <a className="nav-link" href="/PerangkatEWS">
                     <i className="bi-cpu"></i>
                     <span>Perangkat EWS</span>
                     </a>
@@ -162,28 +165,85 @@ const ToolBar = ({}) => {
 
         <main id="main" className="main">
             <div className="pagetitle">
-                <h1>Dashboard</h1>
-                <nav>
-                    <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="Toolbar">Home</a></li>
-                    </ol>
-                </nav>
+                <h1>Perangkat EWS</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="ToolBar">Home</a></li>
+                        <li class="breadcrumb-item active">Perangkat EWS</li>
+                        </ol>
+                    </nav>
             </div>
 
             <section className="section Dashboard">
-                <div className="col-xxl-4 col-xl-12">
-                    <div className="card info-card customers-card">
-                        <div className="card-body">
-                            <h5 className="card-title">Selamat Datang <span> | Kamu!</span></h5>
-                            <div className="text-muted small pt-2 ps-1">
-                                <span>Penjelasan Aplikasi</span>
-                            </div> 
-                        </div>
-
+                <div className="row">
+                    <div className="col-lg-8">
+                                <div className="card info-card customers-card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Perangkat EWS I <span> v 1.0</span></h5>
+                                        <div className="text-muted small pt-2 ps-1">
+                                            <span>Perangkat EWS(Early Warning System) adalah sebuah perang yang berfungsi untuk mendeteksi blababla
+                                                menggunakan sensor ini itu
+                                                sehingga mampu untuk ini itu
+                                            </span>
+                                        </div> 
+                                    </div>
+                            </div>
+                                <div className="card info-card customers-card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Pilih Lokasi Perangkat EWS I <span> v 1.0</span></h5>
+                                        <div className="text-muted small pt-2 ps-1">
+                                            <span>Perangkat yang terdaftar
+                                            </span>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-2">
+                                                <div className="form-group mt-2 mb-2 pd-2">
+                                                    <select name="id_provinsi" id="provinsi" className="form-select">
+                                                        <option value="">Provinsi</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="form-group mt-2 mb-2 pd-2">
+                                                    <select name="id_kota" id="kota" className="form-select" disabled>
+                                                        <option value="">Kota</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="form-group mt-2 mb-2 pd-2">
+                                                    <select name="id_kecamatan" id="kecamatan" className="form-select" disabled>
+                                                        <option value="">Kecamatan</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-2">
+                                                <div className="form-group mt-2 mb-2 pd-2">
+                                                    <select name="id_desa" id="desa" className="form-select" disabled>
+                                                        <option value="">Desa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div className="chart">
+                                            <TesChart/>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                    </div>
+                    <div className="col-lg-4">
+                                <div className="card info-card customers-card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Design EWS I <span>v 1.0</span></h5>
+                                        <div className="text-muted small pt-2 ps-1"></div>
+                                        <img src="/images/Perangkat EWS.jpg" alt=""></img> 
+                                    </div>
+                                </div>
                     </div>
                 </div>
+                
             </section>
-
         </main>
         
         <footer id="footer" className="footer">
@@ -198,6 +258,6 @@ const ToolBar = ({}) => {
         )
     }
 
-export default ToolBar
+export default PerangkatEWS
 
 //npm install remixicon --save

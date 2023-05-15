@@ -11,7 +11,7 @@ function PerangkatA() {
                     <div class="col-sm-2">
                         <div class="form-group mt-2 mb-2 pd-2">
                             <select name="id_provinsi" id="provinsi" class="form-select">
-                                <option value="">Perangkat</option>
+                                <option value="">Provinsi</option>
                             </select>
                         </div>
                     </div>
