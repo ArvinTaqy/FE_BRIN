@@ -1,6 +1,6 @@
 import React from "react";
 import TesChart from "../components/TesChart";
-import ToolBar from "../components/ToolBar";
+import BatteryChart from "../components/BatteryChart";
 
 const PerangkatEWS = ({}) => {
     const select = (el, all = false) => {
@@ -123,31 +123,31 @@ const PerangkatEWS = ({}) => {
                     </a>
                 </li>
 
-                <li className="nav-heading">_______________________</li>
+                <li className="nav-heading">___________________________________</li>
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="#">
+                    <a className="nav-link collapsed" href="Profile">
                     <i className="bi bi-person"></i>
                     <span>Profile</span>
                     </a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="#">
+                    <a className="nav-link collapsed" href="FAQ">
                     <i className="bi bi-question-circle"></i>
                     <span>F.A.Q</span>
                     </a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="#">
+                    <a className="nav-link collapsed" href="Contact">
                     <i className="bi bi-person-lines-fill"></i>
                     <span>Contact</span>
                     </a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href='#'>
+                    <a className="nav-link collapsed" href='Register'>
                     <i className="bi bi-card-checklist"></i>
                     <span>Register</span>
                     </a>
@@ -238,6 +238,12 @@ const PerangkatEWS = ({}) => {
                                         <h5 className="card-title">Design EWS I <span>v 1.0</span></h5>
                                         <div className="text-muted small pt-2 ps-1"></div>
                                         <img src="/images/Perangkat EWS.jpg" alt=""></img> 
+                                    </div>
+                                </div>
+                                <div className="card info-card customers-card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Battery Power <a>: 14.4 V</a></h5>
+                                        <BatteryChart/>
                                     </div>
                                 </div>
                     </div>

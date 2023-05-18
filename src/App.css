@@ -160,7 +160,10 @@ body {
 .breadcrumb a {
   color: #899bbd;
   transition: 0.3s;
-}
+  text-decoration: underline;
+  text-decoration-color: white;
+  font-weight: normal;
+} 
 
 .breadcrumb a:hover {
   color: #51678f;
@@ -173,7 +176,9 @@ body {
 .breadcrumb .active {
   color: #51678f;
   font-weight: 600;
+  font-weight: normal;
 }
+
 /* Card */
 .card {
   margin-bottom: 30px;

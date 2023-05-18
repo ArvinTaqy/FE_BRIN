@@ -3,12 +3,11 @@ import RootLayout from './layouts/RootLayout';
 import { HashRouter, Route, Routes, Switch } from "react-router-dom";
 // import { RootLayout as Router, Route, Routes } from "react-router-dom";
 import './App.css';
-import PerangkatA from './pages/PerangkatA';
-import PerangkatB from './pages/PerangkatB';
-import PerangkatC from './pages/PerangkatC';
-import PerangkatD from './pages/PerangkatD';
 import PerangkatEWS from './pages/PerangkatEWS';
-import Add from './pages/Add';
+import Profile from './pages/Profile';
+import Register from './pages/Register';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
 import Login from './pages/Login';
 import ToolBar from './components/ToolBar';
 
@@ -16,12 +15,11 @@ const App = () => {
   return (
         <Routes>
           <Route path ="/ToolBar" element={<ToolBar />}/>
-          <Route path ="/PerangkatA" element={<PerangkatA />}/>
-          <Route path ="/PerangkatB" element={<PerangkatB />}/>
-          <Route path ="/PerangkatC" element={<PerangkatC />}/>
-          <Route path ="/PerangkatD" element={<PerangkatD />}/>
           <Route path="/PerangkatEWS" element={<PerangkatEWS/>}/>
-          <Route path ="/Add" element={<Add />}/>
+          <Route path ="/Profile" element={<Profile />}/>  
+          <Route path ="/FAQ" element={<FAQ />}/>  
+          <Route path ="/Contact" element={<Contact />}/>  
+          <Route path ="/Register" element={<Register />}/>  
           <Route path ="/Login" element={<Login />}/>  
         </Routes>
   );

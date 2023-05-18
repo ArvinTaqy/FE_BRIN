@@ -14,7 +14,7 @@ function Login() {
                         <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
                         <div className="d-flex justify-content-center py-4">
-                            <a href="index.html" className="logo d-flex align-items-center w-auto">
+                            <a href="ToolBar" className="logo d-flex align-items-center w-auto">
                             <img src="/images/logo/Alt_Logo_BRIN.png" alt=""></img>
                             </a>
                         </div>
@@ -55,7 +55,7 @@ function Login() {
                                 <button className="btn btn-primary w-100" type="submit">Login</button>
                                 </div>
                                 <div className="col-12">
-                                <p className="small mb-0">Don't have account? <a href="pages-register.html">Create an account</a></p>
+                                <p className="small mb-0">Don't have account? <a href="Register">Create an account</a></p>
                                 </div>
                             </form>
 
