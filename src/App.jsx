@@ -14,7 +14,7 @@ import ToolBar from './components/ToolBar';
 const App = () => {
   return (
         <Routes>
-          <Route path ="/ToolBar" element={<ToolBar />}/>
+          <Route exact path ="/" element={<ToolBar />}/>
           <Route path="/PerangkatEWS" element={<PerangkatEWS/>}/>
           <Route path ="/Profile" element={<Profile />}/>  
           <Route path ="/FAQ" element={<FAQ />}/>  

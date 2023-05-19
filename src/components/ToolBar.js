@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const ToolBar = ({}) => {
     const select = (el, all = false) => {
@@ -22,18 +23,29 @@ const ToolBar = ({}) => {
         el.addEventListener('scroll', listener)
     }  
     
-    if (select('.toggle-sidebar-btn')) {
-        on('click', '.toggle-sidebar-btn', function(e) {
-          select('body').classList.toggle('toggle-sidebar')
-        })
-    }  
+    useEffect(() => {
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
+        if (toggleSidebarBtn) {
+          toggleSidebarBtn.addEventListener('click', toggleSidebar);
+        }
+    
+        return () => {
+          if (toggleSidebarBtn) {
+            toggleSidebarBtn.removeEventListener('click', toggleSidebar);
+          }
+        };
+      }, []);
+    
+      const toggleSidebar = () => {
+        document.body.classList.toggle('toggle-sidebar');
+      }  
 
     return (
         <div>
         <header className="header">
         <div className="header fixed-top d-flex align-items-center">
             <div className="d-flex align-items-center justify-content-between">
-                <a href="ToolBar" className="logo d-flex align-items-center">
+                <a href="/" className="logo d-flex align-items-center">
                     <img src="/images/logo/BRIN.png" alt=""></img>
                         <span className="d-none d-lg-block">TIM DIKE</span>
                     </a>    
@@ -107,7 +119,7 @@ const ToolBar = ({}) => {
             <ul className="sidebar-nav" id="sidebar-nav">
 
                 <li className="nav-item">
-                    <a className="nav-link " href='ToolBar'>
+                    <a className="nav-link " href='/'>
                     <i className="bi bi-ui-radios-grid"></i>
                     <span>Dashboard</span>
                     </a>
@@ -165,7 +177,7 @@ const ToolBar = ({}) => {
                 <h1>Dashboard</h1>
                 <nav>
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="Toolbar">Home</a></li>
+                        <li className="breadcrumb-item"><a href="/">Home</a></li>
                     </ol>
                 </nav>
             </div>

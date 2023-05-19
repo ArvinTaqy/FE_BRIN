@@ -204,11 +204,60 @@ body {
 .card-body {
   padding: 0 10px 10px 20px;
 }
+.card-body h2{
+  margin-top: 10px;
+  margin-left: 10px;
+}
 .card img{
   height: 240px;
   width: 280px;
 }
+.card-icon {
+  font-size: 32px;
+  line-height: 0;
+  width: 28px;
+  height: 32px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 0px;
+}
+.card-icon img {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
 
+.info-card h6 {
+  font-size: 14px;
+  color: #012970;
+  font-weight: 400;
+  margin-top: 18px;
+  margin-right: 20px;
+  padding: 0px;
+}
+
+.info-card p {
+  font-size: 18px;
+  color: #b40d0d;
+  font-weight: 600;
+  margin-top: -10px;
+  padding: 0;
+}
+
+.info-card a {
+  font-size: 14px;
+  color: #b40d0d;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.info-card h1 {
+  font-size: 18px;
+  color: #b40d0d;
+  font-weight: 600;
+  margin-top: -10px;
+  padding: 0;
+}
 /*--------------------------------------------------------------
 # End Main
 --------------------------------------------------------------*/

@@ -14,7 +14,7 @@ function Login() {
                         <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
                         <div className="d-flex justify-content-center py-4">
-                            <a href="ToolBar" className="logo d-flex align-items-center w-auto">
+                            <a href="/" className="logo d-flex align-items-center w-auto">
                             <img src="/images/logo/Alt_Logo_BRIN.png" alt=""></img>
                             </a>
                         </div>

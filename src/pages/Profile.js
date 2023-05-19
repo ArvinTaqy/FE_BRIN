@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const Profile = ({}) => {
     const select = (el, all = false) => {
@@ -22,11 +23,22 @@ const Profile = ({}) => {
         el.addEventListener('scroll', listener)
     }  
     
-    if (select('.toggle-sidebar-btn')) {
-        on('click', '.toggle-sidebar-btn', function(e) {
-          select('body').classList.toggle('toggle-sidebar')
-        })
-    }  
+    useEffect(() => {
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
+        if (toggleSidebarBtn) {
+          toggleSidebarBtn.addEventListener('click', toggleSidebar);
+        }
+    
+        return () => {
+          if (toggleSidebarBtn) {
+            toggleSidebarBtn.removeEventListener('click', toggleSidebar);
+          }
+        };
+      }, []);
+    
+      const toggleSidebar = () => {
+        document.body.classList.toggle('toggle-sidebar');
+      }  
 
     return (
         <div>
@@ -34,7 +46,7 @@ const Profile = ({}) => {
         <div className="header fixed-top d-flex align-items-center">
 
             <div className="d-flex align-items-center justify-content-between">
-                <a href="ToolBar" className="logo d-flex align-items-center">
+                <a href="/" className="logo d-flex align-items-center">
                     <img src="/images/logo/BRIN.png" alt=""/>
                     <span className="d-none d-lg-block">TIM DIKE</span>
                 </a>    
@@ -108,14 +120,14 @@ const Profile = ({}) => {
             <ul className="sidebar-nav" id="sidebar-nav">
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed " href='ToolBar'>
+                    <a className="nav-link collapsed " href='/'>
                     <i className="bi bi-ui-radios-grid"></i>
                     <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link" href="/PerangkatEWS">
+                    <a className="nav-link collapsed" href="/PerangkatEWS">
                     <i className="bi-cpu"></i>
                     <span>Perangkat EWS</span>
                     </a>
@@ -124,7 +136,7 @@ const Profile = ({}) => {
                 <li className="nav-heading">___________________________________</li>
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="Profile">
+                    <a className="nav-link" href="Profile">
                     <i className="bi bi-person"></i>
                     <span>Profile</span>
                     </a>
@@ -166,7 +178,7 @@ const Profile = ({}) => {
                 <h1>Profile</h1>
                     <nav>
                         <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="ToolBar">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active">Profile</li>
                         </ol>
                     </nav>

@@ -1,6 +1,10 @@
 import React from "react";
 import TesChart from "../components/TesChart";
 import BatteryChart from "../components/BatteryChart";
+import { useEffect } from "react";
+import HumChart from "../components/HumChart";
+import RainChart from "../components/RainChart";
+
 
 const PerangkatEWS = ({}) => {
     const select = (el, all = false) => {
@@ -24,22 +28,35 @@ const PerangkatEWS = ({}) => {
         el.addEventListener('scroll', listener)
     }  
     
-    if (select('.toggle-sidebar-btn')) {
-        on('click', '.toggle-sidebar-btn', function(e) {
-          select('body').classList.toggle('toggle-sidebar')
-        })
-    }  
+    useEffect(() => {
+        const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
+        if (toggleSidebarBtn) {
+          toggleSidebarBtn.addEventListener('click', toggleSidebar);
+        }
+    
+        return () => {
+          if (toggleSidebarBtn) {
+            toggleSidebarBtn.removeEventListener('click', toggleSidebar);
+          }
+        };
+      }, []);
+    
+      const toggleSidebar = () => {
+        document.body.classList.toggle('toggle-sidebar');
+      }
 
     return (
         <div>
+        <body>
         <header className="header">
         <div className="header fixed-top d-flex align-items-center">
 
             <div className="d-flex align-items-center justify-content-between">
-                <a href="ToolBar" className="logo d-flex align-items-center">
+                <a href="/" className="logo d-flex align-items-center">
                     <img src="/images/logo/BRIN.png" alt=""/>
                     <span className="d-none d-lg-block">TIM DIKE</span>
-                </a>    
+                </a>
+
                 <i className="bi bi-list toggle-sidebar-btn"></i>
             </div>
 
@@ -110,7 +127,7 @@ const PerangkatEWS = ({}) => {
             <ul className="sidebar-nav" id="sidebar-nav">
 
                 <li className="nav-item">
-                    <a className="nav-link collapsed " href='ToolBar'>
+                    <a className="nav-link collapsed " href='/'>
                     <i className="bi bi-ui-radios-grid"></i>
                     <span>Dashboard</span>
                     </a>
@@ -168,7 +185,7 @@ const PerangkatEWS = ({}) => {
                 <h1>Perangkat EWS</h1>
                     <nav>
                         <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="ToolBar">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
                         <li class="breadcrumb-item active">Perangkat EWS</li>
                         </ol>
                     </nav>
@@ -187,13 +204,12 @@ const PerangkatEWS = ({}) => {
                                             </span>
                                         </div> 
                                     </div>
-                            </div>
+                                </div>
                                 <div className="card info-card customers-card">
                                     <div className="card-body">
                                         <h5 className="card-title">Pilih Lokasi Perangkat EWS I <span> v 1.0</span></h5>
                                         <div className="text-muted small pt-2 ps-1">
-                                            <span>Perangkat yang terdaftar
-                                            </span>
+                                            <span>Perangkat yang terdaftar</span>
                                         </div>
                                         <div className="row">
                                             <div className="col-sm-2">
@@ -224,13 +240,76 @@ const PerangkatEWS = ({}) => {
                                                     </select>
                                                 </div>
                                             </div>
+                                            <h2 className="text-muted small pt-2 ps-1">Parameter</h2>
                                         </div> 
+                                        <div className="d-flex align-items-center">
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i className="bi bi-thermometer"></i>
+                                            </div>
+                                            <div className="ps-3">  
+                                            <h6>Suhu</h6>
+                                            <p>31 <a>°C</a></p> 
+                                            </div>
+
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i className="bi bi-droplet-half"></i>
+                                            </div>
+                                            <div className="ps-3">  
+                                            <h6>Kelembaban</h6>
+                                            <p>40 <a>%</a></p> 
+                                            </div>
+
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i className="bi bi-compass"></i>
+                                            </div>
+                                            <div className="ps-3">  
+                                            <h6>Orientasi</h6>
+                                            <p>31 <a>°</a></p> 
+                                            </div>
+
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <img src="/images/icon/cloud-rain.svg"></img>
+                                            </div>
+                                            <div className="ps-3">      
+                                            <h6>Curah Hujan</h6>
+                                            <p>25 <a>mm</a></p> 
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="d-flex align-items-center">
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i className="bi bi-arrows-angle-expand"></i>
+                                            </div>
+                                            <div className="ps-3">  
+                                            <h6>X</h6>
+                                            <p>4 <a>g/mm</a></p> 
+                                            </div>
+
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i className="bi bi-arrow-left-right"></i>
+                                            </div>
+                                            <div className="ps-3">  
+                                            <h6>Y</h6>
+                                            <p>6 <a>g/mm</a></p> 
+                                            </div>
+
+                                            <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i className="bi bi-arrows-angle-contract"></i>
+                                            </div>
+                                            <div className="ps-3">  
+                                            <h6>Z</h6>
+                                            <p>3 <a>g/mm</a></p> 
+                                            </div>
+                                        </div>    
+                                    </div>         
+                                </div>
+                                <div className="card info-card customers-card">
+                                    <div className="card-body"></div>    
                                         <div className="chart">
                                             <TesChart/>
                                         </div>
-                                    </div>
-                                    
                                 </div>
+                                
                     </div>
                     <div className="col-lg-4">
                                 <div className="card info-card customers-card">
@@ -242,9 +321,21 @@ const PerangkatEWS = ({}) => {
                                 </div>
                                 <div className="card info-card customers-card">
                                     <div className="card-body">
-                                        <h5 className="card-title">Battery Power <a>: 14.4 V</a></h5>
+                                        <h5 className="card-title">Battery <a>: 14.4 V</a></h5>
                                         <BatteryChart/>
                                     </div>
+                                </div>
+                                <div className="card info-card customers-card">
+                                    <div className="card-body"></div>    
+                                        <div className="chart">
+                                            <RainChart/>
+                                        </div>
+                                </div>
+                                <div className="card info-card customers-card">
+                                    <div className="card-body"></div>    
+                                        <div className="chart">
+                                            <HumChart/>
+                                        </div>
                                 </div>
                     </div>
                 </div>
@@ -259,6 +350,7 @@ const PerangkatEWS = ({}) => {
         </footer>
 
         <a href="#" className="back-to-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+        </body>  
         </div>
         
         )

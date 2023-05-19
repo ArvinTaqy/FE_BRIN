@@ -1,6 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import Chart from 'chart.js/auto';
+import 'chart.js/auto';
 
 const BatteryChart = () => {
   const data = {
@@ -10,7 +10,8 @@ const BatteryChart = () => {
         label: 'Battery Power',
         data: [14, 13, 13.5, 14.5, 15.5, 15, 14, 14, 13.5, 14.4],
         fill: false,
-        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor:'rgba(0, 0, 0, 0)',
+        borderColor: 'rgba(27, 195, 34, 1)',
         lineTension: 0.5,
       },
     ],
