@@ -1,0 +1,9 @@
+masing" ada rentangnya
+bikin paremeter masing", dan dikasih status 3 warna
+	merah : Awas
+	kuing : Siaga
+	hijau : Aman
+soil
+Grafik sensor 1 aja, nanti ganti" yg ditampilin
+
+titik latitude longitude

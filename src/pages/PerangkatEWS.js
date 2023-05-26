@@ -1,7 +1,7 @@
 import React from "react";
 import TesChart from "../components/TesChart";
 import BatteryChart from "../components/BatteryChart";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import HumChart from "../components/HumChart";
 import RainChart from "../components/RainChart";
 
@@ -41,10 +41,10 @@ const PerangkatEWS = ({}) => {
         };
       }, []);
     
-      const toggleSidebar = () => {
+    const toggleSidebar = () => {
         document.body.classList.toggle('toggle-sidebar');
       }
-
+    
     return (
         <div>
         <body>
@@ -274,6 +274,7 @@ const PerangkatEWS = ({}) => {
                                             <h6>Curah Hujan</h6>
                                             <p>25 <a>mm</a></p> 
                                             </div>
+                                            
                                         </div>
                                         
                                         <div className="d-flex align-items-center">
@@ -304,10 +305,34 @@ const PerangkatEWS = ({}) => {
                                     </div>         
                                 </div>
                                 <div className="card info-card customers-card">
-                                    <div className="card-body"></div>    
-                                        <div className="chart">
+
+                                    <div className="filter">
+                                        <div className="dropdown">
+                                            <button
+                                                className="btn dropdown-toggle"
+                                                type="button"
+                                                id="filterDropdown"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                                >
+                                                <i className="bi bi-three-dots"></i>
+                                            </button>
+                                        <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                            <li className="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                            </li>
+                                            <li><a className="dropdown-item" href="#" >Suhu</a></li>
+                                            <li><a className="dropdown-item" href="#" >Kelembaban</a></li>
+                                            <li><a className="dropdown-item" href="#" >Curah Hujan</a></li>
+                                            <li><a className="dropdown-item" href="#" >Orientasi</a></li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                    <div className="card-body"></div>
+                                        <h5 className="card-title">Grafik </h5>    
+                                    <div className="chart">
                                             <TesChart/>
-                                        </div>
+                                    </div>
                                 </div>
                                 
                     </div>

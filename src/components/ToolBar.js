@@ -183,6 +183,7 @@ const ToolBar = ({}) => {
             </div>
 
             <section className="section Dashboard">
+                <div className="row">
                 <div className="col-xxl-4 col-xl-12">
                     <div className="card info-card customers-card">
                         <div className="card-body">
@@ -192,6 +193,17 @@ const ToolBar = ({}) => {
                             </div> 
                         </div>
 
+                    </div>
+                </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="card info-card customers-card">
+                        <div className="card-body">
+                            <h5 className="card-title">Selamat Datang <span> | Kamu!</span></h5>
+                            <div className="text-muted small pt-2 ps-1">
+                                <span>Penjelasan Aplikasi</span>
+                            </div> 
+                        </div>
                     </div>
                 </div>
             </section>
